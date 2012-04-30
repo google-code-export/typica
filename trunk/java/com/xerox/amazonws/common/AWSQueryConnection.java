@@ -735,8 +735,7 @@ public class AWSQueryConnection extends AWSConnection {
      * Generate an rfc822 date for use in the Date HTTP header.
      */
     private static String httpDate(TimeZone serverTimeZone) {
-        //final String DateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'";
-        final String DateFormat = "yyyy-MM-dd'T'HH:mm:00'Z'";
+        final String DateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'";
         SimpleDateFormat format = new SimpleDateFormat( DateFormat, Locale.US );
         format.setTimeZone(serverTimeZone);
         return format.format( new Date() );
