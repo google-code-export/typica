@@ -2725,6 +2725,25 @@ public class Jec2 extends AWSQueryConnection {
 		return ret;
 	}
 
+	/**
+	 * Creates a new import task.
+	 *
+	 * @param availabilityZone zone to place the EBS volume in
+	 * @param imgFormat format of the disk image
+	 * @param imageSize bytes in the disk image
+	 * @param manifestS3URL pre-signed S3 URL for the image manifest
+	 * @param desc optional description
+	 * @param volumeSize size of EBS volume to be created
+	 * @throws EC2Exception wraps checked exceptions
+	 */
+//	public ConversionTask importInstance(String availabilityZone, ImageFormat imgFormat, long imageSize,
+//								String manifestS3URL, String desc, int volumeSize) throws EC2Exception {
+//		Map<String, String> params = new HashMap<String, String>();
+//		HttpGet method = new HttpGet();
+//		ImportVolumeResponse response =
+//				makeRequestInt(method, "ImportVolume", params, ImportVolumeResponse.class);
+//	}
+
 	// helper method to create common filter parameters
 	protected void createFilterParams(Map<String, String> params, Map<String, List<String>> filters) {
 		if (params == null) throw new IllegalArgumentException("params must always be non-null");
